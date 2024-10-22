@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.form-column {
+    background-color: rgb(160, 205, 244);
+    width: 800px;
+    height: 500px;
+    display: grid;
+    text-align: start;
+  grid-auto-columns: 1fr;
+    grid-template-areas:
+        "heading1 heading1 heading1 ."
+        "heading3 heading3 . ."
+        "name name date date"
+        "email email message message"
+        "phone phone message message"
+        ". . . submit";
+    margin: 40px;
+    padding: 16px;
+}
+
+.heading1 {
+    grid-area: heading1;
+    margin-bottom: 0;
+}
+
+.heading3 {
+    margin-top: 0;
+   grid-area: heading3;
+}
+
+.form-column h1,
+.form-column h3,
+.form-column option,
+.form-column select,
+.form-column label,
+.form-column input,
+.form-column textarea,
+.form-column button {
+   margin: 5px;
+    padding: 3px;
+    display: grid;
+    width: 90%;
+}
+
+.form-column label {
+    text-align: left;
+    /*allinea testo a sx della cella*/
+}
+
+.form-column input[type="text"],
+.form-column input[type="email"],
+.form-column input[type="tel"] {
+    margin-bottom: 10px;
+}
+
+.name-field {
+    grid-area: name;
+}
+
+.email-field {
+    grid-area: email;
+}
+
+.phone-field {
+    grid-area: phone;
+}
+
+.dropdown-field {
+    grid-area: date;
+}
+
+.message-field {
+    grid-area: message;
+}
+
+.contact-button {
+    grid-area: submit;
+}
+
+label {
+    font-weight: bold;
+}
